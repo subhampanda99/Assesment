@@ -1,7 +1,7 @@
 window.onload = function () {
     document.getElementById("download")
         .addEventListener("click", () => {
-            const invoice = this.document.getElementById("tabs");
+            const tab = this.document.getElementById("tabs");
             console.log(tabs);
             console.log(window);
             var opt = {
@@ -11,7 +11,7 @@ window.onload = function () {
                 html2canvas: { scale: 3 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
-            html2pdf().from(invoice).set(opt).save();
+            html2pdf().from(tab).set(opt).save();
         })
 }
 
